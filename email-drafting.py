@@ -74,3 +74,24 @@ if api_key:
     # Show translated email
     if st.session_state.translated_email:
         st.text_area(f"📜 Translated Email in {language}", st.session_state.translated_email, height=300)
+        
+footer = """
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 999;
+}
+</style>
+<div class="footer">
+    © 2025  | Developed by Balakrishna.
+</div>
+"""
+st.markdown(footer, unsafe_allow_html=True)
